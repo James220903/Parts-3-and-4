@@ -131,4 +131,24 @@ body {
     border-bottom: 1px solid #eee; /* Adds a subtle line between items */
     margin-bottom: 2px; /* Space between items */
 }
+#viewSupervisors {
+    height: 300px;  /* Set a fixed height suitable for your layout */
+    overflow-y: auto;  /* Enables vertical scrolling */
+    background-color: #f8f9fa;  /* Light background for the section */
+    border: 1px solid #ddd;  /* Border for clarity */
+    padding: 8px;  /* Padding inside the section */
+    margin-top: 20px;  /* Space above the section */
+    border-radius: 5px;  /* Rounded corners */
+}
+
+#viewSupervisors ul {
+    list-style-type: none;  /* No bullets */
+    padding: 0;  /* No padding to start */
+}
+
+#viewSupervisors ul li {
+    padding: 8px;  /* Comfortable padding inside each list item */
+    border-bottom: 1px solid #eee;  /* Subtle separator between items */
+    margin-bottom: 2px;  /* Small margin between items */
+}
 
