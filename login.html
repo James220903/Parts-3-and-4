@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h1><i class="fas fa-sign-in-alt"></i> Login</h1>
+            <form id="loginForm">
+                <div class="form-field">
+                    <label for="username"><i class="fas fa-user"></i> Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
+                </div>
+                <div class="form-field">
+                    <label for="password"><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <div class="form-field">
+                    <label for="role"><i class="fas fa-users"></i> Role</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select Role</option>
+                        <option value="student">Student</option>
+                        <option value="supervisor">Supervisor</option>
+                        <option value="senior_tutor">Senior Tutor</option>
+                    </select>
+                </div>
+                <button type="submit" class="login-button">Log In</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const role = document.getElementById('role').value;
+
+            if (username && password && role) {
+                switch (role) {
+                    case 'student':
+                        window.location.href = 'Studentdashboard.html';
+                        break;
+                    case 'supervisor':
+                        window.location.href = 'Supervisordashboard.html';
+                        break;
+                    case 'senior_tutor':
+                        window.location.href = 'Seniortutordashboard.html';
+                        break;
+                    default:
+                        alert('Please select a valid role.');
+                        break;
+                }
+            } else {
+                alert('Please complete all fields.');
+            }
+        });
+    </script>
+</body>
+</html>

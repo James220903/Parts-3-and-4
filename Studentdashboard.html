@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="Studentdashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h1><i class="fas fa-user-graduate"></i> Student</h1>
+            <ul>
+                <li><a href="#" onclick="showSection('selfReportsContainer');"><i class="fas fa-file-alt"></i> View Self Report</a></li>
+                <li><a href="#" onclick="showSection('meetingsContainer');"><i class="fas fa-calendar-alt"></i> Meetings</a></li>
+                <li><a href="#" onclick="showSection('createReportForm');"><i class="fas fa-edit"></i> Create Self Report</a></li>
+                <li><a href="#" onclick="showSection('scheduledMeetingsContainer');"><i class="fas fa-calendar-check"></i> View Scheduled Meetings</a></li>
+                <li><a href="#" onclick="logout();"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Welcome to Your Dashboard</h2>
+            <p>Please select an option from the sidebar.</p>
+            <div id="selfReportsContainer" style="display:none;">
+                <h3>Self Reports</h3>
+                <ul id="selfReportsList"></ul>
+            </div>
+            <div id="createReportForm" style="display:none;">
+                <h3>Create a New Self Report</h3>
+                <form id="newReportForm">
+                    <textarea id="reportContent" name="reportContent" placeholder="Enter your report details here..." required></textarea>
+                    <button type="submit">Submit Report</button>
+                </form>
+            </div>
+            <div id="meetingsContainer" style="display:none;">
+                <h3>Meetings</h3>
+                <!-- Simulated content -->
+                <p>List of meetings would appear here.</p>
+            </div>
+            <div id="scheduledMeetingsContainer" style="display:none;">
+                <h3>Scheduled Meetings</h3>
+                <!-- Simulated content -->
+                <p>List of scheduled meetings would appear here.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('newReportForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Report submitted successfully!'); // Simulated success message
+            document.getElementById('reportContent').value = ''; // Clear the textarea after submitting
+        });
+
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content > div');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        function logout() {
+            alert('Logout simulated.'); // Simulated logout alert
+        }
+    </script>
+</body>
+</html>
