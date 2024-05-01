@@ -27,6 +27,64 @@
             <h2>Welcome to Your Senior Tutor Dashboard</h2>
             <p>Please select an option from the sidebar.</p>
             <!-- Example section -->
+            <div id="addStudent" style="display:none;">
+                <h3>Add New Student</h3>
+                <form id="addStudentForm">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" placeholder="Enter Username..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter Password..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter First Name..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name..." required>
+                    </div>
+                    <button type="submit">Add Student</button>
+                </form>
+            </div>
+            <div id="deleteSupervisor" style="display:none;">
+                <h3>Delete a Personal Supervisor</h3>
+                <form id="deleteSupervisorForm">
+                    <label for="supervisorIdToDelete">Delete by ID:</label>
+                    <input type="text" id="supervisorIdToDelete" name="supervisorIdToDelete" placeholder="Enter Supervisor ID..." required>
+                
+                    <label for="supervisorNameToDelete">Or by Name:</label>
+                    <input type="text" id="supervisorNameToDelete" name="supervisorNameToDelete" placeholder="Enter Supervisor Name..." required>
+                
+                    <button type="submit">Delete Supervisor</button>
+                </form>
+            </div>
+            <div id="deleteStudent" style="display:none;">
+                <h3>Delete a Student</h3>
+                <form id="deleteStudentForm">
+                    <label for="studentIdToDelete">Delete by ID:</label>
+                    <input type="text" id="studentIdToDelete" name="studentIdToDelete" placeholder="Enter Student ID..." required>
+            
+                    <label for="studentNameToDelete">Or by Name:</label>
+                    <input type="text" id="studentNameToDelete" name="studentNameToDelete" placeholder="Enter Student Name..." required>
+            
+                    <button type="submit">Delete Student</button>
+                </form>
+            </div>
+            <div id="viewMeetings" style="display:none;">
+                <h3>All Meetings</h3>
+                <ul>
+                    <li><strong>Meeting ID:</strong> 1, <strong>Student ID:</strong> 1, <strong>Supervisor ID:</strong> 1, <strong>Date:</strong> 2023-01-05, <strong>Subject:</strong> Monthly Check-In, <strong>Notes:</strong> Discuss progress and upcoming projects.</li>
+                    <li><strong>Meeting ID:</strong> 2, <strong>Student ID:</strong> 2, <strong>Supervisor ID:</strong> 2, <strong>Date:</strong> 2023-01-06, <strong>Subject:</strong> Assignment Help, <strong>Notes:</strong> Review the requirements for the assignment.</li>
+                    <li><strong>Meeting ID:</strong> 3, <strong>Student ID:</strong> 1, <strong>Supervisor ID:</strong> 1, <strong>Date:</strong> 2023-11-30, <strong>Subject:</strong> not feeling good, <strong>Notes:</strong> no notes</li>
+                    <li><strong>Meeting ID:</strong> 4, <strong>Student ID:</strong> 1, <strong>Supervisor ID:</strong> 1, <strong>Date:</strong> 4534535345, <strong>Subject:</strong> 53434535345345345, <strong>Notes:</strong> 3535345345353</li>
+                    <li><strong>Meeting ID:</strong> 5, <strong>Student ID:</strong> 1, <strong>Supervisor ID:</strong> 1, <strong>Date:</strong> 2023-12-22, <strong>Subject:</strong> work, <strong>Notes:</strong> none</li>
+                    <li><strong>Meeting ID:</strong> 6, <strong>Student ID:</strong> 1, <strong>Supervisor ID:</strong> 1, <strong>Date:</strong> 2028-09-22, <strong>Subject:</strong> work, <strong>Notes:</strong> none</li>
+                </ul>
+            </div>
+            
             <div id="viewSupervisors" style="display:none;">
                 <h3>All Personal Supervisors</h3>
                 <ul>
@@ -97,7 +155,7 @@
                 section.style.display = 'none';
             }
         });
-    }
+        }
 
 
 
@@ -105,6 +163,58 @@
             alert('Logging out...');
             // Redirect to login page or handle logout
         }
+        document.getElementById('deleteStudentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop the form from submitting normally
+            var studentId = document.getElementById('studentIdToDelete').value;
+            var studentName = document.getElementById('studentNameToDelete').value;
+
+            if (studentId && studentName) {
+                alert("Please enter only one value: ID or Name.");
+            } else if (studentId) {
+                alert("Student with ID: " + studentId + " would be deleted.");
+                document.getElementById('studentIdToDelete').value = ''; // Clear ID field
+            } else if (studentName) {
+                alert("Student named: " + studentName + " would be deleted.");
+                document.getElementById('studentNameToDelete').value = ''; // Clear Name field
+            } else {
+                alert("Please enter a Student ID or Name.");
+            }
+        });
+        document.getElementById('deleteSupervisorForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting to the server
+            var supervisorId = document.getElementById('supervisorIdToDelete').value;
+            var supervisorName = document.getElementById('supervisorNameToDelete').value;
+
+            if (supervisorId && supervisorName) {
+                alert("Please enter only one value: ID or Name.");
+            } else if (supervisorId) {
+                alert("Supervisor with ID: " + supervisorId + " would be deleted.");
+                document.getElementById('supervisorIdToDelete').value = ''; // Clear ID field
+            } else if (supervisorName) {
+                alert("Supervisor named: " + supervisorName + " would be deleted.");
+                document.getElementById('supervisorNameToDelete').value = ''; // Clear Name field
+            } else {
+                alert("Please enter a Supervisor ID or Name.");
+            }
+        });
+        document.getElementById('addStudentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting in the traditional way
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+
+            if (username && password && firstName && lastName) {
+                alert("New student added: " + firstName + " " + lastName);
+                // Clear fields after adding the student
+                document.getElementById('username').value = '';
+                document.getElementById('password').value = '';
+                document.getElementById('firstName').value = '';
+                document.getElementById('lastName').value = '';
+            } else {
+                alert("Please fill in all fields.");
+            }
+        });
     </script>
 </body>
 </html>

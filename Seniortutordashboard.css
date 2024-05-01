@@ -1,7 +1,7 @@
 /* Seniortutordashboard.css */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
+    background-color: #a595c5;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -151,4 +151,131 @@ body {
     border-bottom: 1px solid #eee;  /* Subtle separator between items */
     margin-bottom: 2px;  /* Small margin between items */
 }
+#viewMeetings {
+    height: 300px;  /* Adjust this height based on your UI design */
+    overflow-y: auto;  /* Enables vertical scrolling */
+    background-color: #f8f9fa;  /* Light background color for the section */
+    border: 1px solid #ddd;  /* Border for visual separation */
+    padding: 8px;  /* Padding inside the section */
+    margin-top: 20px;  /* Space above the section */
+    border-radius: 5px;  /* Rounded corners for aesthetics */
+}
 
+#viewMeetings ul {
+    list-style-type: none;  /* No bullets */
+    padding: 0;  /* Removes default padding */
+    margin: 0;  /* Aligns content properly */
+}
+
+#viewMeetings ul li {
+    padding: 8px;  /* Adequate padding for readability */
+    border-bottom: 1px solid #eee;  /* Light line between items */
+    margin-bottom: 2px;  /* Small margin for separation */
+    font-size: 14px;  /* Font size for clarity */
+}
+#deleteStudentForm input[type="text"] {
+    width: 80%; /* Adjust width as necessary */
+    padding: 10px; /* Padding for better text visibility */
+    margin: 10px 0; /* Margin for spacing */
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 25px; /* This creates the rounded effect */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2); /* Optional: adds an inset shadow for depth */
+}
+
+#deleteStudentForm button {
+    padding: 10px 20px;
+    background-color: #f44336; /* Red color for the delete button */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Rounded edges for the button */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds shadow for the button */
+}
+
+#deleteStudentForm button:hover {
+    background-color: #d32f2f; /* Darker shade when hovered */
+}
+
+#deleteStudentForm input[type="text"] {
+    width: 80%;  /* Appropriate width */
+    padding: 10px;  /* Padding for text alignment */
+    margin: 10px 0;  /* Margin for vertical spacing */
+    border: 2px solid #ccc;  /* Border style */
+    border-radius: 25px;  /* Rounded corners */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);  /* Subtle inner shadow for depth */
+}
+
+#deleteStudentForm button {
+    padding: 10px 20px;
+    background-color: #f44336;  /* Red button for deletion */
+    color: white;
+    border: none;
+    border-radius: 25px;  /* Rounded edges */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);  /* Button shadow */
+}
+
+#deleteStudentForm button:hover {
+    background-color: #d32f2f;  /* Darker red on hover */
+}
+#deleteSupervisorForm input[type="text"] {
+    width: 80%;  /* Adjust width as necessary */
+    padding: 10px;  /* Padding for better text visibility */
+    margin: 10px 0;  /* Margin for spacing */
+    border: 2px solid #ccc;  /* Border color */
+    border-radius: 25px;  /* Creates the rounded effect */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);  /* Optional: adds an inset shadow for depth */
+}
+
+#deleteSupervisorForm button {
+    padding: 10px 20px;
+    background-color: #f44336;  /* Red color for the delete button */
+    color: white;
+    border: none;
+    border-radius: 25px;  /* Rounded edges for the button */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);  /* Optional: adds shadow for the button */
+}
+
+#deleteSupervisorForm button:hover {
+    background-color: #d32f2f;  /* Darker shade when hovered */
+}
+#addStudentForm .form-group {
+    margin-bottom: 15px;
+}
+
+#addStudentForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#addStudentForm input[type="text"],
+#addStudentForm input[type="password"] {
+    width: 100%;  /* Ensure input fields take up the full width of their container */
+    padding: 10px; 
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+#addStudentForm button {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    display: inline-block;  /* Makes the button align to the form naturally */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#addStudentForm button:hover {
+    background-color: #45a049;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the start of the flex container */
+}
