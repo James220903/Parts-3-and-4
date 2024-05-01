@@ -279,3 +279,35 @@ body {
     flex-direction: column;
     align-items: flex-start; /* Aligns items to the start of the flex container */
 }
+#addSupervisorForm .form-group {
+    margin-bottom: 15px;
+}
+
+#addSupervisorForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#addSupervisorForm input[type="text"],
+#addSupervisorForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+#addSupervisorForm button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#addSupervisorForm button:hover {
+    background-color: #45a049;
+}

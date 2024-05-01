@@ -27,6 +27,28 @@
             <h2>Welcome to Your Senior Tutor Dashboard</h2>
             <p>Please select an option from the sidebar.</p>
             <!-- Example section -->
+            <div id="addSupervisor" style="display:none;">
+                <h3>Add New Personal Supervisor</h3>
+                <form id="addSupervisorForm">
+                    <div class="form-group">
+                        <label for="supervisorUsername">Username:</label>
+                        <input type="text" id="supervisorUsername" name="supervisorUsername" placeholder="Enter Username..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="supervisorPassword">Password:</label>
+                        <input type="password" id="supervisorPassword" name="supervisorPassword" placeholder="Enter Password..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="supervisorFirstName">First Name:</label>
+                        <input type="text" id="supervisorFirstName" name="supervisorFirstName" placeholder="Enter First Name..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="supervisorLastName">Last Name:</label>
+                        <input type="text" id="supervisorLastName" name="supervisorLastName" placeholder="Enter Last Name..." required>
+                    </div>
+                    <button type="submit">Add Supervisor</button>
+                </form>
+            </div>
             <div id="addStudent" style="display:none;">
                 <h3>Add New Student</h3>
                 <form id="addStudentForm">
@@ -211,6 +233,24 @@
                 document.getElementById('password').value = '';
                 document.getElementById('firstName').value = '';
                 document.getElementById('lastName').value = '';
+            } else {
+                alert("Please fill in all fields.");
+            }
+        });
+        document.getElementById('addSupervisorForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting in the traditional way
+            var username = document.getElementById('supervisorUsername').value;
+            var password = document.getElementById('supervisorPassword').value;
+            var firstName = document.getElementById('supervisorFirstName').value;
+            var lastName = document.getElementById('supervisorLastName').value;
+
+            if (username && password && firstName && lastName) {
+                alert("New supervisor added: " + firstName + " " + lastName);
+                // Clear fields after adding the supervisor
+                document.getElementById('supervisorUsername').value = '';
+                document.getElementById('supervisorPassword').value = '';
+                document.getElementById('supervisorFirstName').value = '';
+                document.getElementById('supervisorLastName').value = '';
             } else {
                 alert("Please fill in all fields.");
             }
