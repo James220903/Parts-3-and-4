@@ -1,17 +1,16 @@
-/* Studentdashboard.css */
+/* Supervisordashboard.css */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f2f5;
     margin: 0;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .dashboard {
     width: 960px;
-    height: 600px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     display: flex;
@@ -20,11 +19,9 @@ body {
 }
 
 .sidebar {
-    background-color: #2c3e50;
+    background-color: #34495e;
     color: #ffffff;
     width: 250px;
-    display: flex;
-    flex-direction: column;
     padding: 20px;
 }
 
@@ -40,49 +37,34 @@ body {
 }
 
 .sidebar ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 15px;
     display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.sidebar ul li a:hover,
-.sidebar ul li a:focus {
-    background-color: #34495e;
+.sidebar ul li a:hover {
+    background-color: #2c3e50;
 }
 
 .content {
-    flex-grow: 1;
     padding: 20px;
+    flex-grow: 1;
 }
 
 .content h2 {
-    margin-top: 0;
     color: #333;
 }
 
-.content p {
-    color: #555;
-}
-
-.form-field label,
 .form-field input,
 .form-field select,
 .form-field textarea,
 .login-button {
-    display: block;
     width: 100%;
-    box-sizing: border-box;
-}
-
-.form-field input,
-.form-field select,
-.form-field textarea {
     padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -90,11 +72,10 @@ body {
 .login-button {
     background-color: #2980b9;
     color: white;
-    padding: 10px 15px;
     border: none;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
 }
 
 .login-button:hover {

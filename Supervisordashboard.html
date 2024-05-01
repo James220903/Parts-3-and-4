@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervisor Dashboard</title>
+    <link rel="stylesheet" href="Supervisordashbaord.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h1><i class="fas fa-user-tie"></i> Supervisor</h1>
+            <ul>
+                <li><a href="#" onclick="showSection('viewStudentsContainer');"><i class="fas fa-user-graduate"></i> View My Students</a></li>
+                <li><a href="#" onclick="showSection('scheduledMeetingsContainer');"><i class="fas fa-calendar-alt"></i> View Scheduled Meetings</a></li>
+                <li><a href="#" onclick="showSection('scheduleMeetingForm');"><i class="fas fa-calendar-plus"></i> Schedule Meeting with Student</a></li>
+                <li><a href="#" onclick="logout();"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Welcome to Your Supervisor Dashboard</h2>
+            <p>Please select an option from the sidebar.</p>
+            <div id="viewStudentsContainer" style="display:none;">
+                <h3>My Students</h3>
+                <!-- Dynamic content would be loaded here -->
+            </div>
+            <div id="scheduledMeetingsContainer" style="display:none;">
+                <h3>Scheduled Meetings</h3>
+                <!-- Dynamic content would be loaded here -->
+            </div>
+            <div id="scheduleMeetingForm" style="display:none;">
+                <h3>Schedule a Meeting</h3>
+                <!-- Form to schedule a meeting -->
+                <form>
+                    <input type="text" placeholder="Student Name" required>
+                    <input type="datetime-local" required>
+                    <button type="submit">Schedule</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content > div');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        function logout() {
+            alert('Logging out...');
+            // Redirect to login page or handle logout
+        }
+    </script>
+</body>
+</html>
