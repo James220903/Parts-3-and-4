@@ -1,77 +1,102 @@
-body, h1, h2, ul, li, a, p {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Studentdashboard.css */
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    background-color: #f4f4f4; /* Light grey background */
 }
 
 .dashboard {
+    width: 960px;
+    height: 600px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     display: flex;
-    width: 80%; /* Dashboard width */
-    height: 80%; /* Dashboard height */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for 3D effect */
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .sidebar {
-    background-color: #333;
-    color: #fff;
-    flex: 1;
+    background-color: #2c3e50;
+    color: #ffffff;
+    width: 250px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 20px;
-    border-radius: 15px 0 0 15px; /* Rounded corners on the left side */
 }
 
 .sidebar h1 {
+    font-size: 24px;
+    margin: 0;
     margin-bottom: 20px;
 }
 
 .sidebar ul {
-    width: 100%;
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
 }
 
 .sidebar ul li a {
+    color: #ffffff;
     text-decoration: none;
-    color: #fff;
+    padding: 10px 15px;
     display: block;
-    padding: 10px;
-    transition: background 0.3s;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.sidebar ul li a:hover {
-    background-color: #555;
+.sidebar ul li a:hover,
+.sidebar ul li a:focus {
+    background-color: #34495e;
 }
 
 .content {
-    flex: 3;
+    flex-grow: 1;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 0 15px 15px 0; /* Rounded corners on the right side */
-    overflow-y: auto;
-    display: flex;            /* Enables flexbox */
-    flex-direction: column;   /* Stacks children vertically */
-    justify-content: center;  /* Centers children vertically */
-    align-items: center;      /* Centers children horizontally */
-    height: 100%;             /* Full height to fill the parent container */
 }
 
 .content h2 {
+    margin-top: 0;
     color: #333;
-    margin-bottom: 10px;
-    font-size: 22px;
 }
 
 .content p {
-    color: #666;
+    color: #555;
+}
+
+.form-field label,
+.form-field input,
+.form-field select,
+.form-field textarea,
+.login-button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-button {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 16px;
+}
+
+.login-button:hover {
+    background-color: #3498db;
 }
