@@ -1,0 +1,134 @@
+/* Seniortutordashboard.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dashboard {
+    width: 1100px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.sidebar {
+    background-color: #2c3f50;
+    color: #ffffff;
+    width: 280px;
+    padding: 30px;
+}
+
+.sidebar h1 {
+    font-size: 26px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #21435c;
+}
+
+.content {
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.content h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea,
+.login-button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.login-button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.login-button:hover {
+    background-color: #3498db;
+}
+#systemOverview {
+    height: 400px; /* Adjust height based on your layout needs */
+    overflow-y: auto; /* Enables vertical scrolling if content exceeds the container's height */
+    background-color: #f8f9fa; /* Optional: sets a background color for the section */
+    border: 1px solid #ddd; /* Optional: adds a border for better visibility */
+    padding: 8px; /* Provides space between the content and the borders of the div */
+    margin-top: 20px; /* Optional: adds space above the section */
+    border-radius: 5px; /* Rounds the corners of the section */
+}
+
+.overview-section h4 {
+    margin-top: 0;
+    color: #2c3f50; /* Adjust the color to match your design */
+    padding-bottom: 5px; /* Padding below the header for spacing */
+}
+
+.overview-section ul {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;
+    margin: 0; /* Removes default margin */
+}
+
+.overview-section ul li {
+    padding: 8px; /* Padding inside each list item */
+    border-bottom: 1px solid #eee; /* Adds a subtle line between items */
+    margin-bottom: 2px; /* Space between items */
+}
+/* Inside your Seniortutordashboard.css */
+#viewStudents {
+    height: 400px; /* Adjust height based on your layout needs */
+    overflow-y: auto; /* Enables vertical scrolling if content exceeds the container's height */
+    background-color: #f8f9fa; /* Optional: sets a background color for the section */
+    border: 1px solid #ddd; /* Optional: adds a border for better visibility */
+    padding: 8px; /* Provides space between the content and the borders of the div */
+    margin-top: 20px; /* Optional: adds space above the section */
+    border-radius: 5px; /* Rounds the corners of the section */
+}
+
+#viewStudents ul {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;
+}
+
+#viewStudents ul li {
+    padding: 8px; /* Padding inside each list item */
+    border-bottom: 1px solid #eee; /* Adds a subtle line between items */
+    margin-bottom: 2px; /* Space between items */
+}
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Tutor Dashboard</title>
+    <link rel="stylesheet" href="Seniortutordashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h1><i class="fas fa-chalkboard-teacher"></i> Senior Tutor</h1>
+            <ul>
+                <li><a href="#" onclick="showSection('viewStudents');"><i class="fas fa-users"></i> View All Students</a></li>
+                <li><a href="#" onclick="showSection('viewSupervisors');"><i class="fas fa-user-tie"></i> View All Personal Supervisors</a></li>
+                <li><a href="#" onclick="showSection('viewMeetings');"><i class="fas fa-calendar-alt"></i> View All Meetings</a></li>
+                <li><a href="#" onclick="logout();"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                <li><a href="#" onclick="showSection('deleteStudent');"><i class="fas fa-user-minus"></i> Delete a Student</a></li>
+                <li><a href="#" onclick="showSection('deleteSupervisor');"><i class="fas fa-user-slash"></i> Delete a Personal Supervisor</a></li>
+                <li><a href="#" onclick="showSection('systemOverview');"><i class="fas fa-sitemap"></i> View System Overview</a></li>
+                <li><a href="#" onclick="showSection('addStudent');"><i class="fas fa-user-plus"></i> Add New Student</a></li>
+                <li><a href="#" onclick="showSection('addSupervisor');"><i class="fas fa-user-cog"></i> Add New Personal Supervisor</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Welcome to Your Senior Tutor Dashboard</h2>
+            <p>Please select an option from the sidebar.</p>
+            <!-- Example section -->
+            <div id="viewStudents" style="display:none;">
+                <h3>All Students</h3>
+                <!-- Dynamic content would be loaded here -->
+                <ul>
+                    <li><strong>ID:</strong> 1, <strong>Name:</strong> John Doe</li>
+                    <li><strong>ID:</strong> 2, <strong>Name:</strong> Jane Smith</li>
+                    <li><strong>ID:</strong> 3, <strong>Name:</strong> Emily Johnson</li>
+                    <li><strong>ID:</strong> 4, <strong>Name:</strong> Michael Brown</li>
+                    <li><strong>ID:</strong> 5, <strong>Name:</strong> Linda Taylor</li>
+                    <li><strong>ID:</strong> 6, <strong>Name:</strong> Robert Wilson</li>
+                    <li><strong>ID:</strong> 7, <strong>Name:</strong> Jessica Moore</li>
+                    <li><strong>ID:</strong> 8, <strong>Name:</strong> Daniel Miller</li>
+                    <li><strong>ID:</strong> 9, <strong>Name:</strong> Sarah Davis</li>
+                    <li><strong>ID:</strong> 10, <strong>Name:</strong> Charles Garcia</li>
+                    <li><strong>ID:</strong> 11, <strong>Name:</strong> Patricia Rodriguez</li>
+                    <li><strong>ID:</strong> 12, <strong>Name:</strong> Christopher Lee</li>
+                    <li><strong>ID:</strong> 13, <strong>Name:</strong> Karen Martinez</li>
+                    <li><strong>ID:</strong> 14, <strong>Name:</strong> Joshua Anderson</li>
+                    <li><strong>ID:</strong> 15, <strong>Name:</strong> Angela White</li>
+                    <li><strong>ID:</strong> 16, <strong>Name:</strong> Thomas Walker</li>
+                    <li><strong>ID:</strong> 17, <strong>Name:</strong> Laura Harris</li>
+                    <li><strong>ID:</strong> 18, <strong>Name:</strong> Kevin Young</li>
+                    <li><strong>ID:</strong> 19, <strong>Name:</strong> Nancy Hernandez</li>
+                    <li><strong>ID:</strong> 20, <strong>Name:</strong> Adam King</li>
+                </ul>
+            </div>
+            <!-- Add other sections similarly -->
+            <div id="systemOverview" style="display:none;">
+                <h3>System Overview</h3>
+                <div class="overview-section">
+                    <h4>Meetings:</h4>
+                    <ul>
+                        <li><strong>Meeting ID:</strong> 1, <strong>Date:</strong> 2023-01-05, <strong>Subject:</strong> Monthly Check-In</li>
+                        <li><strong>Meeting ID:</strong> 2, <strong>Date:</strong> 2023-01-06, <strong>Subject:</strong> Assignment Help</li>
+                        <li><strong>Meeting ID:</strong> 3, <strong>Date:</strong> 2023-11-30, <strong>Subject:</strong> not feeling good</li>
+                        <li><strong>Meeting ID:</strong> 4, <strong>Date:</strong> 4534535345, <strong>Subject:</strong> 53434535345345345</li>
+                        <li><strong>Meeting ID:</strong> 5, <strong>Date:</strong> 2023-12-22, <strong>Subject:</strong> work</li>
+                        <li><strong>Meeting ID:</strong> 6, <strong>Date:</strong> 2028-09-22, <strong>Subject:</strong> work</li>
+                    </ul>
+                </div>
+                <div class="overview-section">
+                    <h4>Self Reports:</h4>
+                    <ul>
+                        <li><strong>Report ID:</strong> 1, <strong>Date:</strong> 2023-01-02, <strong>Content:</strong> Feeling good about the progress.</li>
+                        <li><strong>Report ID:</strong> 2, <strong>Date:</strong> 2023-01-03, <strong>Content:</strong> Need help with the latest assignment.</li>
+                        <li><strong>Report ID:</strong> 3, <strong>Date:</strong> 2023-11-30, <strong>Content:</strong> not feeling great</li>
+                        <li><strong>Report ID:</strong> 4, <strong>Date:</strong> 2023-12-14, <strong>Content:</strong> not feeling well</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showSection(sectionId) {
+        const sections = document.querySelectorAll('.content > div');
+        sections.forEach(section => {
+            if (section.id === sectionId) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    }
+
+
+
+        function logout() {
+            alert('Logging out...');
+            // Redirect to login page or handle logout
+        }
+    </script>
+</body>
+</html>
