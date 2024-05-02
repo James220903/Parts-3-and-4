@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard</title>
-    <link rel="stylesheet" href="Supervisordashbaord.css">
+    <link rel="stylesheet" href="studentdash.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -33,15 +33,23 @@
                     <button type="submit">Submit Report</button>
                 </form>
             </div>
-            <div id="meetingsContainer" style="display:none;">
-                <h3>Meetings</h3>
-                <!-- Simulated content -->
-                <p>List of meetings would appear here.</p>
-            </div>
-            <div id="scheduledMeetingsContainer" style="display:none;">
-                <h3>Scheduled Meetings</h3>
-                <!-- Simulated content -->
-                <p>List of scheduled meetings would appear here.</p>
+            <div id="scheduleMeetingForm" style="display:none;">
+                <h3>Schedule a Meeting with a Student</h3>
+                <form id="scheduleMeeting">
+                    <label for="studentSelect">Select a Student:</label>
+                    <select id="studentSelect" name="studentSelect" required>
+                        <option value="2" selected>Jane Smith - ID: 2</option>
+                        <!-- Add other students here -->
+                    </select>
+            
+                    <label for="meetingDate">Enter the date for the meeting (YYYY-MM-DD):</label>
+                    <input type="date" id="meetingDate" name="meetingDate" required>
+            
+                    <label for="meetingSubject">Enter the subject for the meeting:</label>
+                    <input type="text" id="meetingSubject" name="meetingSubject" placeholder="Subject..." required>
+            
+                    <button type="submit">Schedule</button>
+                </form>
             </div>
         </div>
     </div>
